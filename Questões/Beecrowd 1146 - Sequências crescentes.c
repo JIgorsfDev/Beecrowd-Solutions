@@ -1,17 +1,21 @@
 #include <stdio.h>
+
 int main(){
-	int i, numero;
+	int num, i;
 	
 	do{
-		scanf("%d", &numero);
+		scanf("%d", &num);
 		
-		if(numero > 0){
-		for(i = 1; i < numero; i++)
-		printf("%d ", i);
-		
-		printf("%d\n", i);
-	    }
-	}while(numero != 0);
+		for(i = 1; i <= num; i++){
+			printf("%d", i);
+			
+			if(i != num)
+			printf(" ");
+			
+			if(i == num)
+			printf("\n");
+		}
+	}while(num != 0);
 	
-    return 0;
+	return 0;
 }
